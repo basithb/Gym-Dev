@@ -1,0 +1,62 @@
+
+body{
+    background-color:white;
+     /* color: white; */
+}
+
+.navbar{
+
+   
+    border-bottom: grey 3px solid;
+    opacity: 0.9;
+}
+
+#home-section .home-inner {
+    padding-top: 150px;
+  }
+
+#home-section {
+    /* background: url("https://images.unsplash.com/photo-1531265726475-52ad60219627?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=768&q=80"); */
+    /* background-image: url("https://images.unsplash.com/photo-1558611848-73f7eb4001a1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=751&q=80"); */
+    /* background-image: url("https://images.unsplash.com/photo-1590487988256-9ed24133863e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=369&q=80"); */
+    background-image: url("https://images.unsplash.com/photo-1593079831268-3381b0db4a77?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80");
+  
+    /* background-image: url("https://images.unsplash.com/photo-1542924597-e73e0e35c010?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Z3ltJTIwYmFja2dyb3VuZHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"); */
+   
+    
+   
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 800px;
+  }
+  
+  #package-section {
+  
+    /* background-image: url("https://images.unsplash.com/photo-1590487988256-9ed24133863e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=369&q=80"); */
+    /* background-image: url("https://images.unsplash.com/photo-1571902943202-507ec2618e8f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Z3ltJTIwYmFja2dyb3VuZHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"); */
+    background-image: url("https://images.unsplash.com/photo-1574755851171-8959b8334d6e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8Z3ltJTIwYmFja2dyb3VuZHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 800px;
+  }
+
+  .navbar .navbar-brand img {
+    height: 90px;
+  }
+
+  #home-section .light-overlay {
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    min-height: 800px;
+    background: rgba(0,0,0,0.4);
+  }
+ 
+.row{
+padding-top: 50px;
+}
+  
+
