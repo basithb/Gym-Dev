@@ -33,9 +33,11 @@ require_once('customerUserProfile.php');
     -->
             <div class="sidebar-wrapper">
                 <div class="logo">
-                    <a href="javascript:;" class="simple-text">
-                        Logo
-                    </a>
+                <a href="javascript:;" class="simple-text">
+                 <img src="" alt="">
+            </a> 
+                    
+                  
                 </div>
                 <ul class="nav">
 
@@ -73,11 +75,14 @@ require_once('customerUserProfile.php');
 
 
                     <li class="nav-item active active-pro">
-                        <a class="nav-link active text-center" href="../index.html">
-
-                            <p>Log Out</p>
-                        </a>
-                    </li>
+            <a class="">
+              <div class="container">
+                <button type="reset" onclick="location.href='logout.php'" class="btn btn-danger btn-fill btn-block">
+                  Log Out
+                </button>
+              </div>
+            </a>
+          </li>
 
                 </ul>
 
@@ -101,10 +106,10 @@ require_once('customerUserProfile.php');
                         <ul class="nav navbar-nav ml-auto">
 
                             <li class="nav-item">
-                                <a href="#" class="nav-link">
+                                <!-- <a href="#" class="nav-link">
                                     <i class="nc-icon nc-zoom-split"></i>
                                     <span class="d-lg-block">&nbsp;Search</span>
-                                </a>
+                                </a> -->
                             </li>
                         </ul>
 
@@ -118,6 +123,7 @@ require_once('customerUserProfile.php');
 
             <div class="content">
                 <div class="container-fluid">
+                    
 
                     <div class="row">
 
@@ -182,11 +188,11 @@ require_once('customerUserProfile.php');
                                                     placeholder="Enter Your New Password" value="<?php print_r($_SESSION['cust_password']);?>">
                                             </div>
 
-                                            <div class='form-group ml-3'>
+                                            <!-- <div class='form-group ml-3'>
                                                 <label for="password">Confirm Password</label>
                                                 <input class="form-control" type="password" name="password"
                                                     placeholder="Confirm Your Password" >
-                                            </div>
+                                            </div> -->
 
                                         </div>
 

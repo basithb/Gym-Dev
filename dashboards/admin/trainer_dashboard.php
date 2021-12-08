@@ -64,7 +64,7 @@ $sql_exe_cust=mysqli_query($conn,$sql_fetch_cust);
     -->
       <div class="sidebar-wrapper">
         <div class="logo">
-          <a href="javascript:;" class="simple-text"> Logo </a>
+          <a href="javascript:;" class="simple-text"> <img src="" alt=""> </a>
         </div>
         <ul class="nav">
           <!-- <li>
@@ -133,6 +133,7 @@ $sql_exe_cust=mysqli_query($conn,$sql_fetch_cust);
               </div>
             </a>
           </li>
+
         </ul>
       </div>
     </div>
@@ -152,8 +153,8 @@ $sql_exe_cust=mysqli_query($conn,$sql_fetch_cust);
             <ul class="nav navbar-nav ml-auto">
               <li class="nav-item">
                 <a href="#" class="nav-link">
-                  <i class="nc-icon nc-zoom-split"></i>
-                  <span class="d-lg-block">&nbsp;Search</span>
+                  <!-- <i class="nc-icon nc-zoom-split"></i>
+                  <span class="d-lg-block">&nbsp;Search</span> -->
                 </a>
               </li>
             </ul>
@@ -307,7 +308,7 @@ $sql_exe_cust=mysqli_query($conn,$sql_fetch_cust);
             </div>
           </div>
          <td>
-          <a class="btn btn-sm btn-default mr-3" href="userProfile_dashboard.php?id=<?php echo $row['Trainer_id'];?>" role="button">Edit</a>
+          <!-- <a class="btn btn-sm btn-default mr-3" href="userProfile_dashboard.php?id=<?php echo $row['Trainer_id'];?>" role="button">Edit</a> -->
           
           
           <?php

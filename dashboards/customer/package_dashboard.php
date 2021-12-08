@@ -29,7 +29,9 @@
     -->
       <div class="sidebar-wrapper">
         <div class="logo">
-          <a href="javascript:;" class="simple-text"> Logo </a>
+        <a href="" class="simple-text">
+                 <img src="" alt="">
+            </a>
         </div>
         <ul class="nav">
           <li>
@@ -54,8 +56,12 @@
           </li>
 
           <li class="nav-item active active-pro">
-            <a class="nav-link active text-center" href="../index.php">
-              <p>Log Out</p>
+            <a class="">
+              <div class="container">
+                <button type="reset" onclick="location.href='logout.php'" class="btn btn-danger btn-fill btn-block">
+                  Log Out
+                </button>
+              </div>
             </a>
           </li>
         </ul>
@@ -77,8 +83,8 @@
             <ul class="nav navbar-nav ml-auto">
               <li class="nav-item">
                 <a href="#" class="nav-link">
-                  <i class="nc-icon nc-zoom-split"></i>
-                  <span class="d-lg-block">&nbsp;Search</span>
+                  <!-- <i class="nc-icon nc-zoom-split"></i>
+                  <span class="d-lg-block">&nbsp;Search</span> -->
                 </a>
               </li>
             </ul>
@@ -123,7 +129,7 @@
                             <div class="card-body">
                               <a href="">
                                 <p class="font-icon-detail text-right">
-                                  <i class="nc-icon nc-simple-remove"></i>
+                                  <!-- <i class="nc-icon nc-simple-remove"></i> -->
 
                                 </p>
                               </a>

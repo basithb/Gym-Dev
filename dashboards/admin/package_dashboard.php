@@ -43,7 +43,7 @@
       <div class="sidebar-wrapper">
         <div class="logo">
           <a href="javascript:;" class="simple-text">
-            Logo
+           <img src="" alt="">
           </a>
         </div>
         <ul class="nav">
@@ -105,13 +105,17 @@
           </li>
 
 
-
           <li class="nav-item active active-pro">
-            <a class="nav-link active text-center" href="../index.php">
-
-              <p>Log Out</p>
+            <a class="">
+              <div class="container">
+                <button type="reset" onclick="location.href='logout.php'" class="btn btn-danger btn-fill btn-block">
+                  Log Out
+                </button>
+              </div>
             </a>
           </li>
+
+
 
         </ul>
 
@@ -136,8 +140,8 @@
 
               <li class="nav-item">
                 <a href="#" class="nav-link">
-                  <i class="nc-icon nc-zoom-split"></i>
-                  <span class="d-lg-block">&nbsp;Search</span>
+                  <!-- <i class="nc-icon nc-zoom-split"></i>
+                  <span class="d-lg-block">&nbsp;Search</span> -->
                 </a>
               </li>
             </ul>
@@ -209,6 +213,33 @@
 
                           <div class="form-group ml-2 mr-3">
                             <label for="package_trainerfirstname">Trainer Name</label>
+
+                            
+                                <input name="package_trainer" type="hidden" value="<?php echo $Package_trainer?>">
+                                <select name="package_trainer" class="form-control" style="border-left-color: white;"
+                                  id="exampleinput" required>
+                                  <option disabled-selected hidden>Select Trainer</option>
+                                  <?php
+                                     require_once('connection.php');
+                                    $sql_fetch = "SELECT * FROM tbl_trainer";
+  
+                                    $result=mysqli_query($conn,$sql_fetch);
+                                    while($rows=$result->fetch_assoc()) { ?>
+            
+                                    { 
+
+                                    ?>
+
+                                  <option value="<?php echo $rows['Trainer_id'];?>">
+                                  <?php print_r($rows['Trainer_firstname']);
+                              
+                              ?>
+                                  </option>
+                                  <?php
+                    }
+                    ?>
+                                </select>
+                             
                             <!-- <input class="form-control" type="text" name="package_trainerfirstname"
                               placeholder="Enter Trainer Name" /> -->
                               
@@ -243,8 +274,8 @@
                     <div class="carousel-item active">
                       <div class="row">
                         <?php 
-                                require_once('connection.php');
-                                
+                               
+                              //  require_once('connection.php');
                                 $sql_fetch = "SELECT * FROM tbl_package_master";
       
                                 $result=mysqli_query($conn,$sql_fetch);
@@ -315,6 +346,16 @@
       </footer>
     </div>
   </div>
+
+  <script>
+          var loadFile = function(event) {
+            var output = document.getElementById('output');
+            output.src = URL.createObjectURL(event.target.files[0]);
+            output.onload = function() {
+              URL.revokeObjectURL(output.src) // free memory
+            }
+          };
+        </script>
 
 </body>
 <!--   Core JS Files   -->

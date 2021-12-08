@@ -60,7 +60,8 @@ $sql_exe_cust=mysqli_query($conn,$sql_fetch_cust);
     -->
     <div class="sidebar-wrapper">
           <div class="logo">
-            <a href="javascript:;" class="simple-text"> Logo </a>
+            <a href="javascript:;" class="simple-text"> 
+             <img src="" alt="">  </a>
           </div>
           <ul class="nav">
             <!-- <li>
@@ -121,11 +122,16 @@ $sql_exe_cust=mysqli_query($conn,$sql_fetch_cust);
               </a>
             </li>
 
+            
             <li class="nav-item active active-pro">
-              <a class="nav-link active text-center" href="#">
-                <p>Log Out</p>
-              </a>
-            </li>
+            <a class="">
+              <div class="container">
+                <button type="reset" onclick="location.href='logout.php'" class="btn btn-danger btn-fill btn-block">
+                  Log Out
+                </button>
+              </div>
+            </a>
+          </li>
           </ul>
         </div>
       </div>
@@ -155,8 +161,8 @@ $sql_exe_cust=mysqli_query($conn,$sql_fetch_cust);
               <ul class="nav navbar-nav ml-auto">
                 <li class="nav-item">
                   <a href="#" class="nav-link">
-                    <i class="nc-icon nc-zoom-split"></i>
-                    <span class="d-lg-block">&nbsp;Search</span>
+                    <!-- <i class="nc-icon nc-zoom-split"></i> -->
+                    <!-- <span class="d-lg-block">&nbsp;Search</span> -->
                   </a>
                 </li>
               </ul>
@@ -254,17 +260,17 @@ $sql_exe_cust=mysqli_query($conn,$sql_fetch_cust);
                         </td>
 
                         <td>
-                          <a
+                          <!-- <a
                             class="btn btn-sm btn-secondary mr-3"
                             href="#"
                             role="button"
                             >Edit</a
-                          >
+                          > -->
                           <a
                             class="btn btn-sm btn-danger"
                             href="#"
                             role="button"
-                            >Delete</a
+                            >Deactivate</a
                           >
                         </td>
                       </tr>

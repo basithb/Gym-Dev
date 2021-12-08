@@ -52,7 +52,7 @@ $result = $conn->query($sql);
             <div class="sidebar-wrapper">
                 <div class="logo">
                     <a href="javascript:;" class="simple-text">
-                        Logo
+                        <img src="" alt="">
                     </a>
                 </div>
                 <ul class="nav">
@@ -116,6 +116,7 @@ $result = $conn->query($sql);
               </div>
             </a>
           </li>
+
                 </ul>
 
             </div>
@@ -139,8 +140,8 @@ $result = $conn->query($sql);
 
                             <li class="nav-item">
                                 <a href="#" class="nav-link">
-                                    <i class="nc-icon nc-zoom-split"></i>
-                                    <span class="d-lg-block">&nbsp;Search</span>
+                                    <!-- <i class="nc-icon nc-zoom-split"></i>
+                                    <span class="d-lg-block">&nbsp;Search</span> -->
                                 </a>
                             </li>
                         </ul>

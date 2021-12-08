@@ -31,6 +31,7 @@ function test_input($data)
 
         if($row['User_Type'] =='customer')
         {
+          // $_SESSION['username']=$username;
         header("Location: ../dashboards/customer/userProfile_dashboard.php"); } // this should re-direct to the customer dashboard in the future
       
         

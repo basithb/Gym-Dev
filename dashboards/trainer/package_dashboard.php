@@ -43,42 +43,33 @@
       <div class="sidebar-wrapper">
         <div class="logo">
           <a href="javascript:;" class="simple-text">
-            Logo
+           <img src="" alt="">
           </a>
         </div>
         <ul class="nav">
 
-          <!-- <li>
-                <a class="nav-link active" href="userProfile_dashboard.html">
-                    <i class="nc-icon nc-circle-09"></i>
-                    <p> User Profile</p>
-                </a>
-            </li> -->
+        <li class="nav-item">
+                        <a class="nav-link active" href="userProfile_dashboard.php">
+                            <i class="nc-icon nc-circle-09"></i>
+                            <p> User Profile</p>
+                        </a>
+                    </li>
 
-          <li class="nav-item">
-            <a class="nav-link active" href="userProfile_dashboard.php">
-              <i class="nc-icon nc-circle-09"></i>
-              <p> User Profile</p>
-            </a>
-          </li>
-
-          <li>
+            <li>
             <a class="nav-link" href="customer_dashboard.php">
               <i class="nc-icon nc-satisfied"></i>
               <p>Customers</p>
             </a>
           </li>
 
-
-
-
-          <li class="nav-item active">
+          <li class="nav-tem active">
             <a class="nav-link" href="package_dashboard.php">
               <i class="nc-icon nc-app"></i>
               <p>Packages</p>
             </a>
           </li>
 
+         
 
           <li>
             <a class="nav-link" href="exercise_dashboard.php">
@@ -87,7 +78,7 @@
             </a>
           </li>
 
-
+         
 
           <li>
             <a class="nav-link" href="booking_dashboard.php">
@@ -97,13 +88,17 @@
           </li>
 
 
-
           <li class="nav-item active active-pro">
-            <a class="nav-link active text-center" href="../index.php">
-
-              <p>Log Out</p>
+            <a class="">
+              <div class="container">
+                <button type="reset" onclick="location.href='logout.php'" class="btn btn-danger btn-fill btn-block">
+                  Log Out
+                </button>
+              </div>
             </a>
           </li>
+
+
 
         </ul>
 
@@ -128,8 +123,8 @@
 
               <li class="nav-item">
                 <a href="#" class="nav-link">
-                  <i class="nc-icon nc-zoom-split"></i>
-                  <span class="d-lg-block">&nbsp;Search</span>
+                  <!-- <i class="nc-icon nc-zoom-split"></i>
+                  <span class="d-lg-block">&nbsp;Search</span> -->
                 </a>
               </li>
             </ul>
@@ -201,8 +196,10 @@
 
                           <div class="form-group ml-2 mr-3">
                             <label for="package_trainerfirstname">Trainer Name</label>
-                            <input class="form-control" type="text" name="package_trainerfirstname"
-                              placeholder="Enter Trainer Name" />
+                            <!-- <input class="form-control" type="text" name="package_trainerfirstname"
+                              placeholder="Enter Trainer Name" /> -->
+                              
+                              
                           </div>
 
                           <div class="form-group ml-2 mr-3">

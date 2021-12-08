@@ -1,3 +1,8 @@
+<!-- <?php
+session_start();
+echo $_SESSION['cust_user'];
+
+?> -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -66,8 +71,12 @@
           </li>
 
           <li class="nav-item active active-pro">
-            <a class="nav-link active text-center" href="../index.php">
-              <p>Log Out</p>
+            <a class="">
+              <div class="container">
+                <button type="reset" onclick="location.href='logout.php'" class="btn btn-danger btn-fill btn-block">
+                  Log Out
+                </button>
+              </div>
             </a>
           </li>
         </ul>
@@ -399,6 +408,8 @@
                                 <div class="form-group">
                                 <input name="booking_id" type="hidden" value="<?php echo $booking_id?>">
                                 <input name="package_master_id" type="hidden" value="<?php echo $Package_master_id?>">
+                                <input name="package_id" type="hidden" value="<?php echo $_GET['package_id']?>"
+                                
                                 <!-- <input name="customer_id" type="hidden" value="<?php echo $customer_id?>"> -->
                                 <select name="package_slot" class="form-control" style="border-left-color: white;"
                                   id="exampleinput" required>

@@ -51,7 +51,7 @@ function debug_to_console($data) {
   {
        
     echo "Added Successfully!";
-       header("refresh:1; url= ../dashboards/customer/packageInner2_dashboard.php");
+       header("refresh:1; url= ../dashboards/customer/packageInner_dashboard.php"."?package_id=".$_POST['package_id']."&view=personalinfo");
 
   }
   else
