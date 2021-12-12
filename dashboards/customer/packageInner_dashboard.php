@@ -141,119 +141,13 @@ session_start();
                   <h4 class="pull-left">List of Exercise(s)</h4>
 
 
-                  <button class="btn btn-gray ml-4 my-4" data-toggle="modal" data-target="#packageModal">
-                    Add Exercise(s)
-                  </button>
+                 
 
 
-                  <div class="modal" id="packageModal">
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h5 class="modal-title"></h5>
-                          <button class="close" data-dismiss="modal">
-                            &times;
-                          </button>
-                        </div>
-
-
-                        <div class="modal-body">
-
-                          <!-- <label for="package_name">Available Exercise(s)</label>
-                          <br> -->
-
-                          <?php 
-                                require_once('connection.php');
-
-                               
-                                
-                                
-                                $sql_fetch = "SELECT * FROM tbl_exercise";
-                        
-      
-                                $result=mysqli_query($conn,$sql_fetch);
-      
-                                  while($rows=$result->fetch_assoc()) { ?>
-
-                          <!-- <button class="btn btn-default btn-xs">
-                            <?php print_r($rows['Exercise_name']);
-                              
-                              ?>
-                          </button> -->
-
-
-
-
-
-
-                          <?php
-                                
-                                // }
-                              }
-                                ?>
-                          <br>
-
-                          <form action="../../php/addPackageExercise.php" method="POST">
-
-
-                            <!-- <div class="form-group">
-                              <label for="package_exercise">Enter the name of the exercise you wish to add</label>
-                              <input class="form-control" type="package_exercise" name="package_exercise"
-                                placeholder="Enter Exercise Name" />
-                            </div> -->
-
-                            <div class="form-group text-center">
-                              <label for="name">Add Exercise(s)</label>
-                             
-                              
-                              <div class="form-group">
-                                <input name="package_master_id" type="hidden" value="<?php echo $Package_master_id?>">
-                                <select name="package_exercise" class="form-control" style="border-left-color: white;"
-                                  id="exampleinput" required>
-                                  <option disabled-selected hidden>Select Exercise</option>
-                                  <?php
-
-                                    $sql_fetch = "SELECT * FROM tbl_exercise";
-
-                                    $result=mysqli_query($conn,$sql_fetch);
-                                    while($rows=$result->fetch_assoc()) { ?>
-            
-                                    { 
-
-                                    ?>
-
-                                  <option value="<?php echo $rows['Exercise_id'];?>">
-                                  <?php print_r($rows['Exercise_name']);
-                              
-                              ?>
-                                  </option>
-                                  <?php
-                    }
-                    ?>
-                                </select>
-                              </div>
-                            </div>
-
-                            <div class="form-group text-center">
-                            <button
-                                
-                                type="submit" class="btn btn-success btn-md">
-                                Add
-                              </button>
-                            </div>
-                            
-
-
-
-                          </form>
-
-
-                        </div>
-
-                      </div>
-                    </div>
-                  </div>
+                  
                   <div class="mx-auto">
+                    <!-- <p hidden>This paragraph should be hidden.</p> -->
+                   <br>
                     <?php 
                                 
                                 $sql_fetch = "SELECT * FROM tbl_package_child WHERE package_master_id = $Package_master_id";
@@ -270,22 +164,15 @@ session_start();
 
                                      ?>
 
-                    <div class="row ml-3 my-3">
+                    <div class="my-4">
 
-
+                                    <br><br>
                       <?php print_r($rows1['Exercise_name']);
                               
                               ?>
 
 
-                      <a href="" class="ml-auto mr-5">
-                        <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-6">
-                          <div class="font-icon-detail">
-                            <i class="nc-icon nc-simple-remove"></i>
-
-                          </div>
-                        </div>
-                      </a>
+                    
 
 
                     </div>
