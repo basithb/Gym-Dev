@@ -114,7 +114,7 @@
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg" color-on-scroll="500">
           <div class="container-fluid">
-            <a class="navbar-brand" href="#pablo">Booking</a>
+            <a class="navbar-brand" href="#pablo">Bookings</a>
             <button
               href=""
               class="navbar-toggler navbar-toggler-right"
@@ -151,7 +151,7 @@
             <div class="col-md-12">
               <div class="card border-secondary table-plain-bg">
                 <div class="card-header">
-                  <h4 class="card-title pb-2">Booking</h4>
+                  <h4 class="card-title pb-2">Bookings</h4>
                 </div>
 
                 <div class="card-body table-full-width table-responsive">
@@ -169,7 +169,8 @@
                                 require_once('connection.php');
       
       
-                                $sql_fetch = "SELECT * FROM tbl_booking";
+                                $sql_fetch = 
+                                 "SELECT Booking_id, Customer_firstname ,Package_name,Slot_time_start,Booking_date,Package_price FROM tbl_booking JOIN tbl_package_master ON tbl_booking.Package_master_id=tbl_package_master.Package_master_id JOIN tbl_slot ON tbl_booking.Slot_id=tbl_slot.Slot_id JOIN tbl_customer ON tbl_booking.Customer_id=tbl_customer.Customer_id;";
       
                                 $result=mysqli_query($conn,$sql_fetch);
       
