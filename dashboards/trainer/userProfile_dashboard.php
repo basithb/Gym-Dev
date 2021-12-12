@@ -130,8 +130,11 @@ require_once('trainerUserProfile.php');
                 <div class="container-fluid">
 
                     <div class="row">
-
+                    
+                           
                         <div class="col-md-8">
+                        <p class="h3 ml-2"> Hello, <?php print_r($_SESSION['trainer_fname']);?>!</p>
+                        <br>
                             <div class="card">
                                 <div class="card-header">
                                     <h4 class="card-title">Edit Profile</h4>

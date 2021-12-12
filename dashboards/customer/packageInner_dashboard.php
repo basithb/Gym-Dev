@@ -1,8 +1,11 @@
-<!-- <?php
+<?php
 session_start();
-echo $_SESSION['cust_user'];
 
-?> -->
+// echo $_SESSION['cust_user'];
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -97,10 +100,10 @@ echo $_SESSION['cust_user'];
           <div class="collapse navbar-collapse justify-content-end" id="navigation">
             <ul class="nav navbar-nav ml-auto">
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <!-- <a href="#" class="nav-link">
                   <i class="nc-icon nc-zoom-split"></i>
                   <span class="d-lg-block">&nbsp;Search</span>
-                </a>
+                </a> -->
               </li>
             </ul>
           </div>
@@ -408,9 +411,8 @@ echo $_SESSION['cust_user'];
                                 <div class="form-group">
                                 <input name="booking_id" type="hidden" value="<?php echo $booking_id?>">
                                 <input name="package_master_id" type="hidden" value="<?php echo $Package_master_id?>">
-                                <input name="package_id" type="hidden" value="<?php echo $_GET['package_id']?>"
-                                
-                                <!-- <input name="customer_id" type="hidden" value="<?php echo $customer_id?>"> -->
+                                <input name="package_id" type="hidden" value="<?php echo $_GET['package_id']?>">
+                                 <input name="customer_id" type="hidden" value="<?php echo $customer_id?>"> 
                                 <select name="package_slot" class="form-control" style="border-left-color: white;"
                                   id="exampleinput" required>
                                   <option disabled-selected hidden>Select Slot</option>

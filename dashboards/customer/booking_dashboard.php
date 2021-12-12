@@ -1,3 +1,8 @@
+<?php
+
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -134,9 +139,22 @@
                     <tbody>
                       <?php   // LOOP TILL END OF DATA 
                                 require_once('connection.php');
+
+                                $currentUser=$_SESSION['cust_user'];
+
+                                $query = "SELECT Customer_id FROM tbl_customer WHERE Username='$currentUser'" ;
+      
+                                $result=mysqli_query($conn,$query);
+                              
+                              
+                                $row=mysqli_fetch_assoc($result);
+                              
+                                $customerid=$row['Customer_id'];
+
+                                // echo $customerid;
       
       
-                                $sql_fetch = "SELECT * FROM tbl_booking";
+                                $sql_fetch = "SELECT Booking_id,Package_name,Slot_time_start,Booking_date,Package_price FROM tbl_booking JOIN tbl_package_master ON tbl_booking.Package_master_id=tbl_package_master.Package_master_id JOIN tbl_slot ON tbl_booking.Slot_id=tbl_slot.Slot_id WHERE tbl_booking.Customer_id='$customerid';";
       
                                 $result=mysqli_query($conn,$sql_fetch);
       

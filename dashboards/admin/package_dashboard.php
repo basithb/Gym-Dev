@@ -43,7 +43,7 @@
       <div class="sidebar-wrapper">
         <div class="logo">
           <a href="javascript:;" class="simple-text">
-           <img src="" alt="">
+            <img src="" alt="">
           </a>
         </div>
         <ul class="nav">
@@ -55,7 +55,7 @@
                 </a>
             </li> -->
 
-            <li>
+          <li>
             <a class="nav-link" href="customer_dashboard.php">
               <i class="nc-icon nc-satisfied"></i>
               <p>Customers</p>
@@ -214,36 +214,36 @@
                           <div class="form-group ml-2 mr-3">
                             <label for="package_trainerfirstname">Trainer Name</label>
 
-                            
-                                <input name="package_trainer" type="hidden" value="<?php echo $Package_trainer?>">
-                                <select name="package_trainer" class="form-control" style="border-left-color: white;"
-                                  id="exampleinput" required>
-                                  <option disabled-selected hidden>Select Trainer</option>
-                                  <?php
+
+                            <input name="package_trainer" type="hidden" value="<?php echo $Package_trainer?>">
+                            <select name="package_trainer" class="form-control" style="border-left-color: white;"
+                              id="exampleinput" required>
+                              <option disabled-selected hidden>Select Trainer</option>
+                              <?php
                                      require_once('connection.php');
                                     $sql_fetch = "SELECT * FROM tbl_trainer";
   
                                     $result=mysqli_query($conn,$sql_fetch);
                                     while($rows=$result->fetch_assoc()) { ?>
-            
-                                    { 
 
-                                    ?>
+                              {
 
-                                  <option value="<?php echo $rows['Trainer_id'];?>">
-                                  <?php print_r($rows['Trainer_firstname']);
+                              ?>
+
+                              <option value="<?php echo $rows['Trainer_id'];?>">
+                                <?php print_r($rows['Trainer_firstname']);
                               
                               ?>
-                                  </option>
-                                  <?php
+                              </option>
+                              <?php
                     }
                     ?>
-                                </select>
-                             
+                            </select>
+
                             <!-- <input class="form-control" type="text" name="package_trainerfirstname"
                               placeholder="Enter Trainer Name" /> -->
-                              
-                              
+
+
                           </div>
 
                           <div class="form-group ml-2 mr-3">
@@ -268,6 +268,27 @@
                 </div>
 
               </div>
+              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Are you sure you want to deactivate this package?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary mx-auto">Yes</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
               <div class="col-12 pt-5">
                 <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
                   <div class="carousel-inner">
@@ -288,12 +309,20 @@
                           <div class="card">
 
                             <div class="card-body">
-                              <a href="">
+                            <button type="button" class="btn btn-xs btn-light mx-auto" data-toggle="modal" data-target="#exampleModal">
+                            <!-- <p class="font-icon-detail text-right"> -->
+                                  <i class="nc-icon nc-simple-remove mx-auto my-auto"></i>
+
+                                <!-- </p> -->
+</button>
+                              <!-- <a href="">
                                 <p class="font-icon-detail text-right">
-                                  <i class="nc-icon nc-simple-remove"></i>
+                                   
+
+                               
 
                                 </p>
-                              </a>
+                              </a> -->
                             </div>
                             <img height="231" alt="100%x280"
                               src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($rows['Package_img']); ?>" />
@@ -348,31 +377,16 @@
   </div>
 
   <script>
-          var loadFile = function(event) {
-            var output = document.getElementById('output');
-            output.src = URL.createObjectURL(event.target.files[0]);
-            output.onload = function() {
-              URL.revokeObjectURL(output.src) // free memory
-            }
-          };
-        </script>
+    var loadFile = function (event) {
+      var output = document.getElementById('output');
+      output.src = URL.createObjectURL(event.target.files[0]);
+      output.onload = function () {
+        URL.revokeObjectURL(output.src) // free memory
+      }
+    };
+  </script>
 
 </body>
-<!--   Core JS Files   -->
-<script src="../assets/js/core/jquery.3.2.1.min.js" type="text/javascript"></script>
-<script src="../assets/js/core/popper.min.js" type="text/javascript"></script>
-<script src="../assets/js/core/bootstrap.min.js" type="text/javascript"></script>
-<!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
-<script src="../assets/js/plugins/bootstrap-switch.js"></script>
-<!--  Google Maps Plugin    -->
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
-<!--  Chartist Plugin  -->
-<script src="../assets/js/plugins/chartist.min.js"></script>
-<!--  Notifications Plugin    -->
-<script src="../assets/js/plugins/bootstrap-notify.js"></script>
-<!-- Control Center for Light Bootstrap Dashboard: scripts for the example pages etc -->
-<script src="../assets/js/light-bootstrap-dashboard.js?v=2.0.0 " type="text/javascript"></script>
-<!-- Light Bootstrap Dashboard DEMO methods, don't include it in your project! -->
-<script src="../assets/js/demo.js"></script>
+
 
 </html>

@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -392,7 +394,7 @@
 
                   <div class="align-self-center mx-auto text-center my-3">
                     <button class="btn btn-success btn-md ml-3 my-4" data-toggle="modal" data-target="#buyModal">
-                      Book Now
+                      Book
                     </button>
 
                     <div class="modal" id="buyModal">
@@ -468,7 +470,7 @@
                               <div class="form-group">
                                 <div class="text-center">
                                   <button type="submit" class="btn btn-success btn-m">
-                                    Buy Now
+                                    Book Now
                                   </button>
                                 </div>
                               </div>

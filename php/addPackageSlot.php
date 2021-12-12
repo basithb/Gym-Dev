@@ -2,6 +2,8 @@
 require_once('connection.php');
 session_start();
 
+
+
 $package_slot =$slot_id = $usertype ="";
 
 
@@ -36,9 +38,22 @@ function debug_to_console($data) {
 
   }
 
+  $currentUser=$_SESSION['cust_user'];
+
+  $query = "SELECT Customer_id FROM tbl_customer WHERE Username='$currentUser'" ;
+      
+  $result=mysqli_query($conn,$query);
 
 
- $sql_insert_login="INSERT INTO tbl_booking (Booking_id, Slot_id, Package_master_id) VALUES ('$booking_id','$package_slot','$package_master_id')";
+  $row=mysqli_fetch_assoc($result);
+
+  $customerid=$row['Customer_id'];
+
+  $currentDate=date("Y-m-d");
+
+  
+
+ $sql_insert_login="INSERT INTO tbl_booking (Booking_id,Customer_id, Slot_id, Package_master_id,Booking_date,Booking_status) VALUES ('$booking_id','$customerid','$package_slot','$package_master_id','$currentDate','booked')";
 
 
  

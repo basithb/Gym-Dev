@@ -42,6 +42,9 @@ function debug_to_console($data) {
 
   $sql_exe_login=mysqli_query($conn,$sql_insert_login);
 
+
+  // If user type is admin then 
+  // if($_SESSION['User_type']=="admin")
   if($sql_exe_login)
   {
        echo "Added Successfully!";

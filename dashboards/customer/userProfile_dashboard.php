@@ -36,6 +36,7 @@ require_once('customerUserProfile.php');
                 <a href="javascript:;" class="simple-text">
                  <img src="" alt="">
             </a> 
+            
                     
                   
                 </div>
@@ -128,6 +129,8 @@ require_once('customerUserProfile.php');
                     <div class="row">
 
                         <div class="col-md-8">
+                        <p class="h3 ml-2"> Hello, <?php print_r($_SESSION['cust_fname']);?>!</p>
+                        <br>
                             <div class="card">
                                 <div class="card-header">
                                     <h4 class="card-title">Edit Profile</h4>

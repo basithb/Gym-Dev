@@ -222,7 +222,7 @@ $sql_exe_cust=mysqli_query($conn,$sql_fetch_cust);
                           <a
                             href="customerTableUpdate.php?user=<?php echo $row['Username'];?>"
                             style="font-size: small"
-                            class="btn btn-outline-danger"
+                            class="btn btn-danger"
                             >Deactivate</a
                           >
 
@@ -235,7 +235,7 @@ $sql_exe_cust=mysqli_query($conn,$sql_fetch_cust);
                             href="customerTableUpdate.php?user=<?php echo $row['Username'];?>"
                             type="submit"
                             style="font-size: small"
-                            class="btn btn-outline-success"
+                            class="btn btn-success"
                             >Activate</a
                           >
                           <?php
