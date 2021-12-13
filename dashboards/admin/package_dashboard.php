@@ -289,8 +289,11 @@
         Are you sure you want to deactivate this package?
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary mx-auto">Yes</button>
+        <div class="center mx-auto">
+        <button type="button" class="btn btn-primary mr-3">Yes</button>
         <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+        </div>
+        
       </div>
     </div>
   </div>
