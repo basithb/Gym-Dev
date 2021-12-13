@@ -152,10 +152,14 @@
       
       
                                 $sql_fetch = "SELECT * FROM tbl_booking";
+
+                                $sql_fetch = 
+                                "SELECT Booking_id, Customer_firstname ,Package_name,Slot_time_start,Booking_date,Package_price FROM tbl_booking JOIN tbl_package_master ON tbl_booking.Package_master_id=tbl_package_master.Package_master_id JOIN tbl_slot ON tbl_booking.Slot_id=tbl_slot.Slot_id JOIN tbl_customer ON tbl_booking.Customer_id=tbl_customer.Customer_id;";
+     
+                               $result=mysqli_query($conn,$sql_fetch);
+     
+                                 while($rows=$result->fetch_assoc()) { ?>
       
-                                $result=mysqli_query($conn,$sql_fetch);
-      
-                                  while($rows=$result->fetch_assoc()) { ?>
                       <tr>
                         <td>
                           <?php print_r($rows['Booking_id']);?>
