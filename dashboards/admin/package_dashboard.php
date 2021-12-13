@@ -106,11 +106,11 @@
 
 
           <li class="nav-item">
-              <a class="nav-link" href="reports_dashboard.php">
-                <i class="nc-icon nc-paper-2"></i>
-                <p>Reports</p>
-              </a>
-            </li>
+            <a class="nav-link" href="reports_dashboard.php">
+              <i class="nc-icon nc-paper-2"></i>
+              <p>Reports</p>
+            </a>
+          </li>
 
 
           <li class="nav-item active active-pro">
@@ -276,28 +276,29 @@
                 </div>
 
               </div>
-              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel"></h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        Are you sure you want to deactivate this package?
-      </div>
-      <div class="modal-footer">
-        <div class="center mx-auto">
-        <button type="button" class="btn btn-primary mr-3">Yes</button>
-        <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
-        </div>
-        
-      </div>
-    </div>
-  </div>
-</div>
+              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel"></h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      Are you sure you want to deactivate this package?
+                    </div>
+                    <div class="modal-footer">
+                      <div class="center mx-auto">
+                        <button type="button" class="btn btn-primary mr-3">Yes</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
 
 
               <div class="col-12 pt-5">
@@ -320,12 +321,13 @@
                           <div class="card">
 
                             <div class="card-body">
-                            <button type="button" class="btn btn-xs btn-light mx-auto" data-toggle="modal" data-target="#exampleModal">
-                            <!-- <p class="font-icon-detail text-right"> -->
-                                  <i class="nc-icon nc-simple-remove mx-auto my-auto"></i>
+                              <button type="button" class="btn btn-xs btn-light mx-auto" data-toggle="modal"
+                                data-target="#exampleModal">
+                                <!-- <p class="font-icon-detail text-right"> -->
+                                <i class="nc-icon nc-simple-remove mx-auto my-auto"></i>
 
                                 <!-- </p> -->
-</button>
+                              </button>
                               <!-- <a href="">
                                 <p class="font-icon-detail text-right">
                                    
