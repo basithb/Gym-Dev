@@ -105,6 +105,14 @@
           </li>
 
 
+          <li class="nav-item">
+              <a class="nav-link" href="reports_dashboard.php">
+                <i class="nc-icon nc-paper-2"></i>
+                <p>Reports</p>
+              </a>
+            </li>
+
+
           <li class="nav-item active active-pro">
             <a class="">
               <div class="container">
