@@ -1,6 +1,8 @@
 <?php
 require_once('connection.php');
 
+session_start();
+
 $sql_fetch_cust="SELECT * FROM tbl_category";
 
 $sql_exe_cust=mysqli_query($conn,$sql_fetch_cust);
@@ -180,9 +182,41 @@ $sql_exe_cust=mysqli_query($conn,$sql_fetch_cust);
         <!-- End Navbar -->
         
         <div class="content">
+
+
+          
           <div class="container-fluid">
+       
             <div class="col-md-12">
+            <?php if(isset($_SESSION['success'])) { ?>
+          <!-- <div class="alert alert-success alert-dismissible">
+              <button class="close" type="button" data-dismiss="alert">
+                  <span>&times;</span>
+              </button>
+              <p><?php echo $_SESSION['success']; 
+              unset($_SESSION['success']);
+              
+              ?></p>
+              
+          </div> -->
+          <div class="alert alert-success">
+                                        <button type="button" aria-hidden="true" class="" data-dismiss="alert">
+                                            <i class="nc-icon nc-simple-remove"></i>
+                                        </button>
+                                        <span>
+                                            <b> Added Successfully! </b> </span>
+                                    </div>
+        <?php } else{ ?>
+          <!-- <div class="alert alert-danger">
+                                        <button type="button" aria-hidden="true" class="" data-dismiss="alert">
+                                            <i class="nc-icon nc-simple-remove"></i>
+                                        </button>
+                                        <span>
+                                            <b> Error! </b> </span>
+                                    </div> -->
+          <?php } ?>
               <div class="card border-secondary table-plain-bg">
+
                 <div class="card-header">
                   <h4 class="card-title pb-2">Category</h4>
 

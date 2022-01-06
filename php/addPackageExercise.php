@@ -32,7 +32,7 @@ function debug_to_console($data) {
 
   }
 
-echo $package_master_id;
+// echo $package_master_id;
 
  $sql_insert="INSERT INTO tbl_package_child (Exercise_id, Package_master_id) VALUES ('$package_exercise', '$package_master_id')";
 
@@ -49,7 +49,7 @@ echo $package_master_id;
       
     $result=mysqli_query($conn,$sql_fetch);
 
-    while($rows=$result->fetch_assoc()) { 
+    if($result) { 
        echo "Added Successfully!";
        header("refresh:1; url= ../dashboards/admin/packageInner_dashboard.php?package_id=".$package_master_id);
     }

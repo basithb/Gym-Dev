@@ -49,7 +49,7 @@ session_start();
     -->
       <div class="sidebar-wrapper">
         <div class="logo">
-          <a href="javascript:;" class="simple-text"> Logo </a>
+          <a href="javascript:;" class="simple-text">  <img src="" alt="">  </a>
         </div>
         <ul class="nav">
         <li>
@@ -72,6 +72,13 @@ session_start();
               <p>Bookings</p>
             </a>
           </li>
+
+          <li>
+                        <a class="nav-link" href="card_dashboard.php">
+                            <i class="nc-icon nc-credit-card"></i>
+                            <p>Add Card</p>
+                        </a>
+                    </li>
 
           <li class="nav-item active active-pro">
             <a class="">
@@ -138,16 +145,13 @@ session_start();
                     <?php print_r($rows['Package_description']);?>
                   </p>
 
-                  <h4 class="pull-left">List of Exercise(s)</h4>
+                  <h4 class="">List of Exercise(s)</h4>
 
 
-                 
 
-
-                  
                   <div class="mx-auto">
                     <!-- <p hidden>This paragraph should be hidden.</p> -->
-                   <br>
+                   <!-- <br> -->
                     <?php 
                                 
                                 $sql_fetch = "SELECT * FROM tbl_package_child WHERE package_master_id = $Package_master_id";
@@ -166,7 +170,7 @@ session_start();
 
                     <div class="my-4">
 
-                                    <br><br>
+                                    <!-- <br> -->
                       <?php print_r($rows1['Exercise_name']);
                               
                               ?>
@@ -296,10 +300,10 @@ session_start();
                                 <label for="">Choose your preffered slot</label>
 
                                 <div class="form-group">
-                                <input name="booking_id" type="hidden" value="<?php echo $booking_id?>">
+                                <!-- <input name="booking_id" type="hidden" value="<?php echo $booking_id?>"> -->
                                 <input name="package_master_id" type="hidden" value="<?php echo $Package_master_id?>">
                                 <input name="package_id" type="hidden" value="<?php echo $_GET['package_id']?>">
-                                 <input name="customer_id" type="hidden" value="<?php echo $customer_id?>"> 
+                                 <!-- <input name="customer_id" type="hidden" value="<?php echo $customer_id?>">  -->
                                 <select name="package_slot" class="form-control" style="border-left-color: white;"
                                   id="exampleinput" required>
                                   <option disabled-selected hidden>Select Slot</option>

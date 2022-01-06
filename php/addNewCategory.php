@@ -38,13 +38,14 @@ function debug_to_console($data) {
 
   if($sql_exe_login)
   {
-       echo "Added Successfully!";
-       header("refresh:1; url= ../dashboards/admin/category_dashboard.php");
-
+       $_SESSION['success']="Added Category Successfully!";
+       header('Location: ../dashboards/admin/category_dashboard.php');
+      //  header("url= ../dashboards/admin/category_dashboard.php");
   }
   else
   {
-      echo "$sql_insert_login";
+    $_SESSION['error']="Added Category Successfully!";
+    header('Location: ../dashboards/admin/category_dashboard.php');
   } 
 
   mysqli_close($conn);

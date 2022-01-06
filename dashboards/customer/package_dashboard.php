@@ -55,6 +55,13 @@
             </a>
           </li>
 
+          <li>
+                        <a class="nav-link" href="card_dashboard.php">
+                            <i class="nc-icon nc-credit-card"></i>
+                            <p>Add Card</p>
+                        </a>
+                    </li>
+
           <li class="nav-item active active-pro">
             <a class="">
               <div class="container">

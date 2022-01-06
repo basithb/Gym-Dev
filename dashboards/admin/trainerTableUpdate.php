@@ -1,5 +1,5 @@
 <?php
-require_once('Connection.php');
+require_once('connection.php');
 session_start();
 
 function test_input($data)
@@ -9,11 +9,11 @@ function test_input($data)
     $data = htmlspecialchars($data);
     return $data;
   }
-  if($_SERVER["REQUEST_METHOD"]=="POST")
-  {
+  // if($_SERVER["REQUEST_METHOD"]=="POST")
+  // {
 
-    $password=test_input($_POST["password"]);
-  }
+  //   $user=$_GET["user"];
+  // }
 
 $user=mysqli_real_escape_string($conn,$_GET['user']);
 
@@ -21,9 +21,10 @@ $sql_fetch="SELECT * FROM tbl_login WHERE Username='$user'";
 $sql_fetch_details=mysqli_query($conn,$sql_fetch);
 
 $log=mysqli_fetch_assoc($sql_fetch_details);
-
+ echo $_SESSION['User_type'];
 if($_SESSION['User_type']=="admin")
 {
+  echo "i to a";
     if($log['Status']=='Active')
     {
         $del_login="UPDATE tbl_login SET Status='Inactive' WHERE Username='$user'";
@@ -33,7 +34,8 @@ if($_SESSION['User_type']=="admin")
     }
     else if ($log['Status']=='Inactive')
     {
-        $del_login="UPDATE tbl_login SET L_Status='Active' WHERE Username='$user'";
+      echo "i to a";
+        $del_login="UPDATE tbl_login SET Status='Active' WHERE Username='$user'";
         $del_login_exe=mysqli_query($conn,$del_login);
         header('Location: trainer_dashboard.php');
         $_SESSION['status']="Active";

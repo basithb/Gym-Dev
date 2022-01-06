@@ -32,15 +32,17 @@ function test_input($data)
         if($row['User_Type'] =='customer')
         {
           // $_SESSION['username']=$username;
-        header("Location: ../dashboards/customer/userProfile_dashboard.php"); } // this should re-direct to the customer dashboard in the future
+          header("Location: ../dashboards/customer/userProfile_dashboard.php"); 
+        } // this should re-direct to the customer dashboard in the future
       
         
         else if($row['User_Type'] =='trainer')
         {
-        header("Location: ../dashboards/trainer/userProfile_dashboard.php"); }
+          header("Location: ../dashboards/trainer/userProfile_dashboard.php"); 
+        }
 
         else{
-        header("Location: ../dashboards/admin/customer_dashboard.php");
+          header("Location: ../dashboards/admin/customer_dashboard.php");
         }
 
         $_SESSION['cust_user']=$row['Username']; 

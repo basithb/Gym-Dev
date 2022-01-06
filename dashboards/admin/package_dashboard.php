@@ -229,22 +229,27 @@
                               <option disabled-selected hidden>Select Trainer</option>
                               <?php
                                      require_once('connection.php');
-                                    $sql_fetch = "SELECT * FROM tbl_trainer";
+                                     $sql_fetch_tid = mysqli_query($conn,"SELECT * FROM tbl_login WHERE Status='Active' AND User_Type='trainer'");
+                                     while($row1 = $sql_fetch_tid->fetch_assoc()){
+                                       $t_username = $row1['Username'];
+                                      $sql_fetch = "SELECT * FROM tbl_trainer WHERE Username = '$t_username'";
   
-                                    $result=mysqli_query($conn,$sql_fetch);
-                                    while($rows=$result->fetch_assoc()) { ?>
-
-                              {
-
-                              ?>
-
-                              <option value="<?php echo $rows['Trainer_id'];?>">
-                                <?php print_r($rows['Trainer_firstname']);
-                              
-                              ?>
-                              </option>
-                              <?php
-                    }
+                                      $result=mysqli_query($conn,$sql_fetch);
+                                      while($rows=$result->fetch_assoc()) { ?>
+  
+                                
+  
+                                ?>
+  
+                                <option value="<?php echo $rows['Trainer_id'];?>">
+                                  <?php print_r($rows['Trainer_firstname']);
+                                
+                                ?>
+                                </option>
+                                <?php
+                      }
+                                     }
+                                       
                     ?>
                             </select>
 
