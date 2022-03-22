@@ -182,7 +182,7 @@ $sql_exe_cust=mysqli_query($conn,$sql_fetch_cust);
                 <option disabled-selected hidden>Select Category</option>
                 <?php
 
-                        $sql_fetch_cat = "SELECT * FROM tbl_category";
+                        $sql_fetch_cat = "SELECT * FROM tbl_category WHERE Category_status='Active'";
 
                         // $sql_fetch_it = "SELECT * FROM tbl_category WHERE I_Status='Active'";
 
@@ -275,8 +275,32 @@ $sql_exe_cust=mysqli_query($conn,$sql_fetch_cust);
                       
 
                       <td>
-                        <!-- <a class="btn btn-sm btn-secondary mr-3" href="#" role="button">Edit</a> -->
-                        <a class="btn btn-sm btn-danger" href="#" role="button">Deactivate</a>
+                      <?php
+                            if($rows['Exercise_status']=="Active")
+                            {
+                            ?>
+                          <a
+                            href="exerciseTableUpdate.php?exercise=<?php echo $rows['Exercise_id'];?>"
+                            style="font-size: small"
+                            class="btn btn-sm btn-danger"
+                            >Deactivate</a
+                          >
+
+                          <?php
+                            }
+                            else
+                            {
+                            ?>
+                          <a
+                            href="exerciseTableUpdate.php?exercise=<?php echo $rows['Exercise_id'];?>"
+                            type="submit"
+                            style="font-size: small"
+                            class="btn btn-sm btn-success"
+                            >Activate</a
+                          >
+                          <?php
+                            }
+                            ?>
                       </td>
                     </tr>
                     <?php

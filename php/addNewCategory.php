@@ -29,7 +29,7 @@ function debug_to_console($data) {
 
   }
 
-  $sql_insert_login="INSERT INTO tbl_category (Category_name) VALUES ('$category_name')";
+  $sql_insert_login="INSERT INTO tbl_category (Category_name, Category_status) VALUES ('$category_name', 'Active')";
  
 /* 
   $sql_insert_login="INSERT INTO tbl_feedback (Username, User_type,Rating, details) VALUES ('a','a','1','abs')";  */

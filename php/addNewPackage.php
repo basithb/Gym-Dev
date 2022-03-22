@@ -36,7 +36,7 @@ function debug_to_console($data) {
   }
 
 
- $sql_insert_login="INSERT INTO tbl_package_master (Package_name , Package_description, Package_img, Trainer_id, Package_price) VALUES ('$package_name', '$package_description', '$package_img' , '$package_trainer', '$package_price')";
+ $sql_insert_login="INSERT INTO tbl_package_master (Package_name , Package_description, Package_img, Trainer_id, Package_price, Package_status) VALUES ('$package_name', '$package_description', '$package_img' , '$package_trainer', '$package_price', 'Active')";
  
  
 

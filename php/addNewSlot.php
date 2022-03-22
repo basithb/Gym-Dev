@@ -30,7 +30,7 @@ function debug_to_console($data) {
 
   }
 
-  $sql_insert_login="INSERT INTO tbl_slot (Slot_time_start, Slot_time_end) VALUES ('$slot_time_start', '$slot_time_end')";
+  $sql_insert_login="INSERT INTO tbl_slot (Slot_time_start, Slot_time_end, Slot_status) VALUES ('$slot_time_start', '$slot_time_end', 'Active')";
  
 /* 
   $sql_insert_login="INSERT INTO tbl_feedback (Username, User_type,Rating, details) VALUES ('a','a','1','abs')";  */

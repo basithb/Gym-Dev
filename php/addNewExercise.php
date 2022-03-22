@@ -33,7 +33,7 @@ function debug_to_console($data) {
 
 
 
- $sql_insert_login="INSERT INTO tbl_exercise (Exercise_name, Category_id) VALUES ('$exercise_name','$category_id')";
+ $sql_insert_login="INSERT INTO tbl_exercise (Exercise_name, Category_id, Exercise_status) VALUES ('$exercise_name','$category_id', 'Active')";
 
 
  

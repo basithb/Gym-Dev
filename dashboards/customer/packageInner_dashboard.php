@@ -309,7 +309,7 @@ session_start();
                                   <option disabled-selected hidden>Select Slot</option>
                                   <?php
 
-                                    $sql_fetch = "SELECT * FROM tbl_slot";
+                                    $sql_fetch = "SELECT * FROM tbl_slot WHERE Slot_status='Active'";
 
                                     $result=mysqli_query($conn,$sql_fetch);
                                     while($rows=$result->fetch_assoc()) { ?>

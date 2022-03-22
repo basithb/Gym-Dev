@@ -283,18 +283,32 @@ $sql_exe_cust=mysqli_query($conn,$sql_fetch_cust);
                             <?php print_r($rows['Slot_time_end']);?>
                           </td>
                         <td>
-                          <!-- <a
-                            class="btn btn-sm btn-secondary mr-3"
-                            href="#"
-                            role="button"
-                            >Edit</a
-                          > -->
+                        <?php
+                            if($rows['Slot_status']=="Active")
+                            {
+                            ?>
                           <a
+                            href="slotTableUpdate.php?slot=<?php echo $rows['Slot_id'];?>"
+                            style="font-size: small"
                             class="btn btn-sm btn-danger"
-                            href="#"
-                            role="button"
                             >Deactivate</a
                           >
+
+                          <?php
+                            }
+                            else
+                            {
+                            ?>
+                          <a
+                            href="slotTableUpdate.php?slot=<?php echo $rows['Slot_id'];?>"
+                            type="submit"
+                            style="font-size: small"
+                            class="btn btn-sm btn-success"
+                            >Activate</a
+                          >
+                          <?php
+                            }
+                            ?>
                         </td>
                       </tr>
                       <?php

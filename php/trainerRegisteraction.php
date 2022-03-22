@@ -23,14 +23,13 @@ function test_input($data)
     $phone=test_input($_POST["phone_number"]);
     $email=test_input($_POST["email"]);
     $password=test_input($_POST["password"]);
-   
     $usertype=test_input($_POST["usertype"]);
   }
 
 
 
   if($usertype=="Trainer"){
-    $sql_insert_login="INSERT INTO tbl_login (Username, Password , User_Type) VALUES ('$email', '$password', 'trainer')";
+    $sql_insert_login="INSERT INTO tbl_login (Username, Password , User_Type, Status) VALUES ('$email', '$password', 'trainer', 'Active')";
 
     $sql_insert_customer="INSERT INTO tbl_trainer (Username,Trainer_firstname,Trainer_lastname,Trainer_phonenumber,Trainer_pin,Trainer_address) VALUES ('$email', '$firstname', '$lastname','$phone','$pincode','$address')";
 
@@ -51,6 +50,7 @@ if(mysqli_query($conn,$sql_insert_login))
    if(mysqli_query($conn,$sql_insert_customer))
    {
        echo "Registered Successfully! ";
+       header("Location:../dashboards/admin/trainer_dashboard.php");
        exit;
    }
 

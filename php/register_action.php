@@ -52,7 +52,7 @@ function test_input($data)
         {
           
           echo "Registered Successfully! ";
-
+          header("Location:../index.php");
             exit;
         }
 

@@ -301,18 +301,32 @@ $sql_exe_cust=mysqli_query($conn,$sql_fetch_cust);
                         </td>
 
                         <td>
-                          <!-- <a
-                            class="btn btn-sm btn-secondary mr-3"
-                            href="#"
-                            role="button"
-                            >Edit</a
-                          > -->
+                        <?php
+                            if($rows['Category_status']=="Active")
+                            {
+                            ?>
                           <a
+                            href="categoryTableUpdate.php?category=<?php echo $rows['Category_id'];?>"
+                            style="font-size: small"
                             class="btn btn-sm btn-danger"
-                            href="#"
-                            role="button"
                             >Deactivate</a
                           >
+
+                          <?php
+                            }
+                            else
+                            {
+                            ?>
+                          <a
+                            href="categoryTableUpdate.php?category=<?php echo $rows['Category_id'];?>"
+                            type="submit"
+                            style="font-size: small"
+                            class="btn btn-sm btn-success"
+                            >Activate</a
+                          >
+                          <?php
+                            }
+                            ?>
                         </td>
                       </tr>
                       <?php

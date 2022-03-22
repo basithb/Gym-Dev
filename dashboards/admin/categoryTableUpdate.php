@@ -15,29 +15,28 @@ function test_input($data)
   //   $user=$_GET["user"];
   // }
 
-$user=mysqli_real_escape_string($conn,$_GET['user']);
+$categoryid=mysqli_real_escape_string($conn,$_GET['category']);
 
-$sql_fetch="SELECT * FROM tbl_login WHERE Username='$user'";
+$sql_fetch="SELECT * FROM tbl_category WHERE Category_id='$categoryid'";
 $sql_fetch_details=mysqli_query($conn,$sql_fetch);
 
 $log=mysqli_fetch_assoc($sql_fetch_details);
- echo $_SESSION['User_type'];
 if($_SESSION['User_type']=="admin")
 {
   // echo "i to a";
-    if($log['Status']=='Active')
+    if($log['Category_status']=='Active')
     {
-        $del_login="UPDATE tbl_login SET Status='Inactive' WHERE Username='$user'";
+        $del_login="UPDATE tbl_category SET Category_status='Inactive' WHERE Category_id='$categoryid'";
         $del_login_exe=mysqli_query($conn,$del_login);
-        header('Location: trainer_dashboard.php');
+        header('Location: category_dashboard.php');
         $_SESSION['status']="Inactive";
     }
-    else if ($log['Status']=='Inactive')
+    else if ($log['Category_status']=='Inactive')
     {
-      // echo "i to a";
-        $del_login="UPDATE tbl_login SET Status='Active' WHERE Username='$user'";
+      echo "i to a";
+        $del_login="UPDATE tbl_category SET Category_status='Active' WHERE Category_id='$categoryid'";
         $del_login_exe=mysqli_query($conn,$del_login);
-        header('Location: trainer_dashboard.php');
+        header('Location: category_dashboard.php');
         $_SESSION['status']="Active";
     }
 }
