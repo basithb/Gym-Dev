@@ -231,7 +231,7 @@
                                   <option disabled-selected hidden>Select Exercise</option>
                                   <?php
 
-                                    $sql_fetch = "SELECT * FROM tbl_exercise";
+                                    $sql_fetch = "SELECT * FROM tbl_exercise WHERE Exercise_status='Active'";
 
                                     $result=mysqli_query($conn,$sql_fetch);
                                     while($rows=$result->fetch_assoc()) { ?>
@@ -382,9 +382,9 @@
                               ?>
 
                   <div class="align-self-center mx-auto text-center my-3">
-                    <button class="btn btn-success btn-md ml-3 my-4" data-toggle="modal" data-target="#buyModal">
+                    <!-- <button class="btn btn-success btn-md ml-3 my-4" data-toggle="modal" data-target="#buyModal">
                       Book Now
-                    </button>
+                    </button> -->
 
                     <div class="modal" id="buyModal">
                       <div class="modal-dialog">

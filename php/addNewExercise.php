@@ -45,7 +45,13 @@ function debug_to_console($data) {
   if($sql_exe_login)
   {
        echo "Added Successfully!";
-       header("refresh:1; url= ../dashboards/admin/exercise_dashboard.php");
+       if($_SESSION['User_type']=="admin"){
+        header("refresh:1; url= ../dashboards/admin/exercise_dashboard.php");
+       }
+       
+       else if($_SESSION['User_type']=="trainer"){
+        header("refresh:1; url= ../dashboards/trainer/exercise_dashboard.php");
+       }
 
   }
   else

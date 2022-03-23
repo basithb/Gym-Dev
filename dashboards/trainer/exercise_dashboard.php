@@ -228,7 +228,7 @@ $sql_exe_cust=mysqli_query($conn,$sql_fetch_cust);
                   <th>Exercise ID</th>
                     <th>Exercise Name</th>
                     <th>Category Name</th>
-                    <th>Action</th>
+                    <!-- <th>Action</th> -->
                   </thead>
                   <tbody>
                     <?php   // LOOP TILL END OF DATA 
@@ -274,7 +274,7 @@ $sql_exe_cust=mysqli_query($conn,$sql_fetch_cust);
 
                       
 
-                      <td>
+                      <!-- <td>
                       <?php
                             if($rows['Exercise_status']=="Active")
                             {
@@ -301,7 +301,7 @@ $sql_exe_cust=mysqli_query($conn,$sql_fetch_cust);
                           <?php
                             }
                             ?>
-                      </td>
+                      </td> -->
                     </tr>
                     <?php
                                 
